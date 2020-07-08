@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res/css/index.css">
+    <title>Ninpo</title>
+</head>
+<body>
+    <aside class="oth-tools">
+        <div class="gomibako" title="Klik untuk membersihkan canvas">X</div>
+        <div class="save" title="Klik untuk mengunduh citra">➲</div>
+    </aside>
+    <main>
+        <canvas></canvas>
+         <div class="pallete-box">
+             <div class="palletes ninpo-sltd-col"></div>
+             <div class="palletes"></div>
+             <div class="palletes"></div>
+             <div class="palletes"></div>
+             <div class="palletes"></div>
+             <div class="color-picker-box">
+                <div class="palletes selected-color"></div>
+                 <input type="color" id="color-picker" value="#eeeeee">
+            </div>
+             <!-- <input class="palletes color" type="color" onchange="this.style.backgroundColor = this.value"> -->
+        </div>
+         <div class="tools">
+             <div class="line-size-box">
+                 <input type="range" min="1" max="100" value="2" id="line-size">
+                 <span class="line-size-val">2</span>
+            </div>
+        </div>
+    </main>
+    <script src="res/js/Ninpo.js"></script>
+
+    <script>
+        let ninpo = new Ninpo({
+            el: 'canvas',
+            tools: {
+                colors: '.palletes',
+                lineSizeChanger: {
+                    input: '.line-size-box input',
+                    valueBox: '.line-size-box span'
+                },
+                cleaner: '.gomibako',
+                colorPicker: {
+                    picker: '.color-picker-box input',
+                    picked: '.color-picker-box div'
+                }
+            },
+            size: 'auto'
+        })
+
+    </script>
+</body>
+</html>

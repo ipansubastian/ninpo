@@ -1,0 +1,166 @@
+canvas {
+    cursor: url('../images/pencil.svg'), pointer;
+}
+.oth-tools {
+    float: left;
+}
+.gomibako, .save {
+cursor: pointer;
+border: 1px solid black;
+width: 30px;
+height: 30px;
+border-radius: 2px;
+text-align: center;
+font-size: 30px;
+font-family: Arial,
+Helvetica,
+sans-serif;
+margin-top: 4px;
+padding: 0;
+}
+
+.gomibako {
+    background-color: #171717;
+    color: #FFFFFF;
+}
+
+.save {
+    transform: rotate(90deg);
+    padding-bottom: 5px;
+    padding-top: -5px;
+}
+
+main {
+    width: 1200px;
+    margin: auto;
+}
+
+canvas {
+    display: block;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.palletes {
+    margin: 10px 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    border: 1px solid silver;
+    display: block;
+    overflow: hidden;
+    transition-duration: .2s;
+}
+
+.palletes:hover{
+    transform: scale(1.1);
+    
+    /* transi */
+}
+
+.palletes .ninpo-sltd-col {
+    width:  100%;
+    height: 100%;
+    border-radius: 50%;
+    justify-content: center;
+    margin-top: 8px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px grey, -1px -1px 1px grey;
+}
+
+.palletes:nth-child(1) {
+    background-color: #000000;
+}
+
+.palletes:nth-child(2) {
+    background-color: #006400;
+}
+
+.palletes:nth-child(3) {
+    background-color: #ff7f50;
+}
+
+.palletes:nth-child(4) {
+    background-color: #daa520;
+}
+
+.palletes:nth-child(5) {
+    background-color: #4682b4;
+}
+
+.palletes:nth-child(5) {
+        background-color: #dc143c;
+}
+
+.palletes:nth-child(6) {
+    background-color: #FFFFFF;
+}
+
+
+.color-picker-box{
+    margin-top: 8px;
+    float: left;
+    border: 1px solid grey;
+    border-radius: 2px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    /* display: none; */
+    /* position: absolute;
+    transform: translateY(10px);
+    width: 50px;
+    height: 40px;
+    left: 370px;
+    overflow: hidden;
+    border: 1px solid black; */
+}
+
+#color-picker, .selected-color {
+    float: left;
+    display: block;
+    margin: 0;
+}
+
+#color-picker {
+    margin-top: 5px;
+}
+
+.tools {
+    float: left;
+    /* border: 1px solid red; */
+}
+.line-size-box {
+    float: left;
+    width: 200px;
+    margin: 15px;
+    margin-left: 40px;
+    padding: 4px 10px;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+.line-size-val {
+    transform: translate(6px, -4px);
+    display: inline-block;
+    /* margin: 14px; */
+}
+
+.eraser {
+    margin-top: 10px;
+    float: left;
+    width:  40px;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+
+.ninpo-sltd-col {
+    background-image: url('../images/selected.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: normal;
+    
+}
