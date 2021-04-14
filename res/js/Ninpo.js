@@ -291,6 +291,19 @@ class Ninpo {
             })
         }
 
+      if (this.tools.saver) {
+        this.tools.saver.addEventListener('click', e => {
+          const tmpAnchor = document.createElement('a')
+          const fileName = `Ninpo_${(new Date).valueOf()}.png`;
+          tmpAnchor.download = fileName;
+          try {
+            tmpAnchor.href = this.canvas.toDataURL();
+          } catch (e) {
+            console.error('Elemen vanvas belum diatur!')
+          }
+          tmpAnchor.click();
+        })
+      }
 
     }
 
